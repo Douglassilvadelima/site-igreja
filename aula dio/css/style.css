@@ -1,0 +1,116 @@
+/* --- Configurações Gerais --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    overflow-x: hidden;
+}
+
+/* --- Fundo com a Logo da Igreja --- */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url("https://tse2.mm.bing.net/th/id/OIP.6o3qebatrg3P2MeI5-pOiwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    opacity: 0.1; /* Logo bem suave ao fundo */
+}
+
+/* --- Container Principal (Caixa Branca) --- */
+.container {
+    max-width: 850px;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.95);
+    margin: 40px 0;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    animation: fadeUp 1s ease-out; /* Efeito de entrada */
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Flutua levemente ao passar o mouse */
+}
+
+/* --- Títulos --- */
+h1 {
+    color: #1a2a3a;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #2c3e50;
+    border-left: 5px solid #007bff;
+    padding-left: 15px;
+    margin-top: 30px;
+    font-size: 1.5rem;
+}
+
+/* --- Menu de Redes Sociais --- */
+.social-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.social-menu li a i {
+    font-size: 32px;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+/* Cores ao passar o mouse nos ícones */
+.social-menu li a:hover .fa-facebook { color: #1877F2; transform: scale(1.2); }
+.social-menu li a:hover .fa-instagram { color: #E1306C; transform: scale(1.2); }
+.social-menu li a:hover .fa-location-dot { color: #ff4d4d; transform: scale(1.2); }
+
+/* --- Texto --- */
+p {
+    line-height: 1.8;
+    color: #444;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* --- Rodapé --- */
+.direitos {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.direitos hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+/* --- Animação de Entrada --- */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
